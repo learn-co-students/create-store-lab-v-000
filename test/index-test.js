@@ -6,7 +6,7 @@ import UserInput from '../src/components/UserInput';
 import { configureStore } from '../src/index.js';
 
 describe('store', () => {
-  
+
   let store = configureStore();
 
   it('returns the initial state after redux dispatches its initial action', () => {
@@ -15,7 +15,7 @@ describe('store', () => {
 
   it('updates the state when an action is dispatched', () => {
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
         username: 'bob',
         hometown: 'philly'
@@ -46,9 +46,10 @@ describe('UserInput', () => {
   });
 
   it('has changes the state of username on a keydown in the username input', () => {
-    const wrapper = shallow(<UserInput />);
+    const wrapper = mount(<UserInput />);
     expect(wrapper.state('username')).to.equal('');
-    let input = wrapper.find('input').first();
+    let input = wrapper.find('.username');
+    expect(input.hasClass('username')).to.be.equal.true;
     input.simulate('change', { target: { value: 'Hello' } });
     expect(wrapper.state('username')).to.equal('Hello');
   })
@@ -56,7 +57,8 @@ describe('UserInput', () => {
   it('has changes the state of hometown on a keydown in the hometown input', () => {
     const wrapper = shallow(<UserInput />);
     expect(wrapper.state('hometown')).to.equal('');
-    let input = wrapper.find({type: 'text'}).last();
+    let input = wrapper.find('.hometown');
+    expect(input.hasClass('hometown')).to.be.equal.true;
     input.simulate('change', { target: { value: 'Hello' } });
     expect(wrapper.state('hometown')).to.equal('Hello');
   })
@@ -65,9 +67,11 @@ describe('UserInput', () => {
     let store = configureStore();
     const wrapper = shallow(<UserInput store={store} />);
     expect(wrapper.state('hometown')).to.equal('');
-    let usernameInput = wrapper.find('input').first();
+    let usernameInput = wrapper.find('.username');
+    expect(usernameInput.hasClass('username')).to.be.equal.true;
     usernameInput.simulate('change', { target: { value: 'Bob' } });
-    let hometownInput = wrapper.find({ type: 'text' }).last();
+    let hometownInput = wrapper.find('.hometown');
+    expect(hometownInput.hasClass('username')).to.be.equal.true;
     hometownInput.simulate('change', { target: { value: 'philly' } });
     let form = wrapper.find('form').first();
     form.simulate('submit',  { preventDefault() {} });
