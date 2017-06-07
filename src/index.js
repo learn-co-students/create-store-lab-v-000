@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import manageBand from './reducers/manageBand';
 import App from './App';
 
@@ -10,6 +11,8 @@ export function configureStore(){
 };
 
 ReactDOM.render(
-  <App store={configureStore()} />,
+  <Provider store={configureStore()}>
+    <App store={configureStore()} />
+  </Provider>,
   document.getElementById('root')
 );
