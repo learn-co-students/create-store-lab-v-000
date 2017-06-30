@@ -8,28 +8,31 @@ class UserInput extends Component {
         hometown: ''
       }
   }
-  handleChange(event){
+  handleUsernameChange(event){
     this.setState({
-      [event.target.name]: event.target.value
+      username: event.target.value
     })
-    console.log(this.state)
   }
+
+  handleHometownChange(event){
+    this.setState({
+      hometown: event.target.value
+    })
+  }
+
   handleSubmit(event){
     event.preventDefault();
     this.props.store.dispatch({
       type: 'ADD_USER',
-      user: {
-        username: this.state.username,
-        hometown: this.state.hometown
-      }
+      user: this.state
     })
   }
   render() {
     return(
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" name="username" onChange={this.handleChange.bind(this)} value={this.state.username}/>
-          <input type="text" name="hometown" onChange={this.handleChange.bind(this)} value={this.state.hometown}/>
+          <input type="text" name="username" onChange={this.handleUsernameChange.bind(this)} value={this.state.username}/>
+          <input type="text" name="hometown" onChange={this.handleHometownChange.bind(this)} value={this.state.hometown}/>
           <input type="submit"/>
         </form>
       </div>
