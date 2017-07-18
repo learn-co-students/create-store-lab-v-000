@@ -1,0 +1,210 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 0,
+    "pending": 0,
+    "failures": 8,
+    "start": "2017-07-18T21:56:00.369Z",
+    "end": "2017-07-18T21:56:00.614Z",
+    "duration": 245
+  },
+  "tests": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { users: [] }",
+        "showDiff": true,
+        "expected": {
+          "users": []
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { users: [] }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:13:38)"
+      }
+    },
+    {
+      "title": "updates the state when an action is dispatched",
+      "fullTitle": "store updates the state when an action is dispatched",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { Object (users) }",
+        "showDiff": true,
+        "expected": {
+          "users": [
+            {
+              "username": "bob",
+              "hometown": "philly"
+            }
+          ]
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { Object (users) }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:24:38)"
+      }
+    },
+    {
+      "title": "has an text input for the username field",
+      "fullTitle": "UserInput has an text input for the username field",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected null to equal 'input'",
+        "showDiff": true,
+        "actual": null,
+        "expected": "input",
+        "stack": "AssertionError: expected null to equal 'input'\n    at Context.<anonymous> (test/index-test.js:35:53)"
+      }
+    },
+    {
+      "title": "has an initial state with username key set to empty string",
+      "fullTitle": "UserInput has an initial state with username key set to empty string",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'username' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:40:20)",
+        "message": "Cannot read property 'username' of null"
+      }
+    },
+    {
+      "title": "has an initial state with hometown key set to empty string",
+      "fullTitle": "UserInput has an initial state with hometown key set to empty string",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:45:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    },
+    {
+      "title": "has changes the state of username on a keydown in the username input",
+      "fullTitle": "UserInput has changes the state of username on a keydown in the username input",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'username' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:50:20)",
+        "message": "Cannot read property 'username' of null"
+      }
+    },
+    {
+      "title": "has changes the state of hometown on a keydown in the hometown input",
+      "fullTitle": "UserInput has changes the state of hometown on a keydown in the hometown input",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:58:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    },
+    {
+      "title": "updates the store when the form is submitted",
+      "fullTitle": "UserInput updates the store when the form is submitted",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:67:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { users: [] }",
+        "showDiff": true,
+        "expected": {
+          "users": []
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { users: [] }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:13:38)"
+      }
+    },
+    {
+      "title": "updates the state when an action is dispatched",
+      "fullTitle": "store updates the state when an action is dispatched",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { Object (users) }",
+        "showDiff": true,
+        "expected": {
+          "users": [
+            {
+              "username": "bob",
+              "hometown": "philly"
+            }
+          ]
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { Object (users) }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:24:38)"
+      }
+    },
+    {
+      "title": "has an text input for the username field",
+      "fullTitle": "UserInput has an text input for the username field",
+      "duration": 9,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected null to equal 'input'",
+        "showDiff": true,
+        "actual": null,
+        "expected": "input",
+        "stack": "AssertionError: expected null to equal 'input'\n    at Context.<anonymous> (test/index-test.js:35:53)"
+      }
+    },
+    {
+      "title": "has an initial state with username key set to empty string",
+      "fullTitle": "UserInput has an initial state with username key set to empty string",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'username' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:40:20)",
+        "message": "Cannot read property 'username' of null"
+      }
+    },
+    {
+      "title": "has an initial state with hometown key set to empty string",
+      "fullTitle": "UserInput has an initial state with hometown key set to empty string",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:45:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    },
+    {
+      "title": "has changes the state of username on a keydown in the username input",
+      "fullTitle": "UserInput has changes the state of username on a keydown in the username input",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'username' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:50:20)",
+        "message": "Cannot read property 'username' of null"
+      }
+    },
+    {
+      "title": "has changes the state of hometown on a keydown in the hometown input",
+      "fullTitle": "UserInput has changes the state of hometown on a keydown in the hometown input",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:58:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    },
+    {
+      "title": "updates the store when the form is submitted",
+      "fullTitle": "UserInput updates the store when the form is submitted",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "stack": "TypeError: Cannot read property 'hometown' of null\n    at ShallowWrapper.state (node_modules/enzyme/build/ShallowWrapper.js:899:24)\n    at Context.<anonymous> (test/index-test.js:67:20)",
+        "message": "Cannot read property 'hometown' of null"
+      }
+    }
+  ],
+  "passes": []
+}
