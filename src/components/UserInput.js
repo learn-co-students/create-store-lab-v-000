@@ -27,6 +27,10 @@ class UserInput extends Component {
         hometown: this.state.hometown,
       }
     })
+    this.setState({
+      username: "",
+      hometown: "",
+    })
   }
   render() {
     return(
