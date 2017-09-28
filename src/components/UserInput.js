@@ -28,7 +28,12 @@ class UserInput extends Component {
     this.props.store.dispatch({
       type: 'ADD_USER',
       user: this.state
-    })
+    });
+
+    this.setState({
+      username: '',
+      hometown: ''
+    });
   }
 
   render() {
