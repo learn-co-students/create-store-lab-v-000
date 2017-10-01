@@ -12,13 +12,12 @@ class UserInput extends Component {
 
   handleOnChange(event) {
     this.setState({
-      username: event.target.value,
-      hometown: event.target.value,
+      [event.target.name]: event.target.value,
     });
   }
 
   handleOnSubmit(event) {
-    event.preventDefault();
+		event.preventDefault();
     this.props.store.dispatch({
      type: 'ADD_USER',
      user: {
@@ -36,10 +35,10 @@ class UserInput extends Component {
   render() {
     return(
       <div>
-        <form>
+        <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <input type="text" name="username" onChange={(event) => this.handleOnChange(event)}/>
           <input type="text" name="hometown" onChange={(event) => this.handleOnChange(event)}/>
-          <input type="submit" onSubmit={(event) => this.handleOnSubmit(event)}/>
+          <input type="submit"/>
         </form>
       </div>
     );
