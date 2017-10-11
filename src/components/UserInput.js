@@ -14,7 +14,7 @@ class UserInput extends Component {
     this.props.store.dispatch({
       type: 'ADD_USER',
       user: {
-        username: this.state.username, 
+        username: this.state.username,
         hometown: this.state.hometown,
       }
     })
@@ -34,24 +34,24 @@ class UserInput extends Component {
     return(
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <label htmlFor="usernameInput">
+          <label>
             ENTER username:
           </label>
           <input
-            id="usernameInput"
+
             type="text"
-            value={this.state.username}
+
             onChange={this.handleOnChangeUsername}
           />
           <br/>
 
-          <label htmlFor="hometownInput">
+          <label >
             ENTER hometown:
           </label>
           <input
-            id="hometownInput"
+
             type="text"
-            value={this.state.hometown}
+            // value={this.state.hometown}
             onChange={this.handleOnChangeHometown}
           />
           <input type="submit"/>
