@@ -14,7 +14,7 @@ class UserInput extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
+    {debugger};
     this.props.store.dispatch({
       type: 'ADD_USER',
       user: {
