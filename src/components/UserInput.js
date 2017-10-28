@@ -39,14 +39,14 @@ class UserInput extends Component {
             name='username'
             type='text'
             value={this.state.username}
-            onChange={(event) => this.handleOnChangeName(event)}
+            onChange={(event) => this.handleOnChange(event)}
           /><br></br>
           <label>Hometown: </label>
           <input
             name='hometown'
             type='text'
             value={this.state.hometown}
-            onChange={(event) => this.handleOnChangeTown(event)}
+            onChange={(event) => this.handleOnChange(event)}
           /><br></br>
           <input type='submit' />
         </form>
