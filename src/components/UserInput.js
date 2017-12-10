@@ -20,10 +20,7 @@ class UserInput extends Component {
     event.preventDefault();
     this.props.store.dispatch({
       type: 'ADD_USER',
-      user: {
-        username: this.state.username,
-        hometown: this.state.hometown
-      }
+      user: this.state
     });
     this.setState({
       username: '',
@@ -37,19 +34,20 @@ class UserInput extends Component {
       <div>
         <h3>Add User</h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <label>Username</label>
           <input
             type="text"
             name="username"
             value={this.state.username}
-            onChange={(event) => this.handleOnChange(event)} />
+            onChange={(event) => this.handleOnChange(event)}
+            placeholder="Username" />
           <br />
-          <label>Hometown</label>
           <input
             type="text"
             name="hometown"
             value={this.state.hometown}
-            onChange={(event) => this.handleOnChange(event)} />
+            onChange={(event) => this.handleOnChange(event)}
+            placeholder="Hometown" />
+          <br />
           <input type="submit" />
         </form>
       </div>
