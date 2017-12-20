@@ -10,12 +10,9 @@ class UserInput extends Component {
 	}
 
 	handleChange = (e) => {
-		switch(e.target.name) {
-			case 'username':
-				this.setState({ username: e.target.value })
-			case 'hometown':
-				this.setState({ hometown: e.target.value })
-		}
+		this.setState({
+			[e.target.name]: e.target.value
+		})
 	}
 
 	handleSubmit = (e) => {
