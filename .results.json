@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-01-16T22:40:28.492Z",
+    "end": "2018-01-16T22:40:28.620Z",
+    "duration": 128
+  },
+  "tests": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the state when an action is dispatched",
+      "fullTitle": "store updates the state when an action is dispatched",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an text input for the username field",
+      "fullTitle": "UserInput has an text input for the username field",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with username key set to empty string",
+      "fullTitle": "UserInput has an initial state with username key set to empty string",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with hometown key set to empty string",
+      "fullTitle": "UserInput has an initial state with hometown key set to empty string",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state of username on change of the username input",
+      "fullTitle": "UserInput has changes the state of username on change of the username input",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state of hometown on change of the hometown input",
+      "fullTitle": "UserInput has changes the state of hometown on change of the hometown input",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the store when the form is submitted",
+      "fullTitle": "UserInput updates the store when the form is submitted",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the state when an action is dispatched",
+      "fullTitle": "store updates the state when an action is dispatched",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an text input for the username field",
+      "fullTitle": "UserInput has an text input for the username field",
+      "duration": 6,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with username key set to empty string",
+      "fullTitle": "UserInput has an initial state with username key set to empty string",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an initial state with hometown key set to empty string",
+      "fullTitle": "UserInput has an initial state with hometown key set to empty string",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state of username on change of the username input",
+      "fullTitle": "UserInput has changes the state of username on change of the username input",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has changes the state of hometown on change of the hometown input",
+      "fullTitle": "UserInput has changes the state of hometown on change of the hometown input",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "updates the store when the form is submitted",
+      "fullTitle": "UserInput updates the store when the form is submitted",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
