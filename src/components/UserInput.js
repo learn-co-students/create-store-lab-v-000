@@ -29,9 +29,9 @@ class UserInput extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <input type='text' name='username' onChange={event => this.handleOnChange(event)} />
-          <input type='text' name='hometown' onChange={event => this.handleOnChange(event)} />
+        <form onSubmit={(event) => this.handleOnSubmit(event)} onChange={event => this.handleOnChange(event)}>
+          <input type='text' name='username' />
+          <input type='text' name='hometown' />
           <input type='submit' />
         </form>
       </div>
