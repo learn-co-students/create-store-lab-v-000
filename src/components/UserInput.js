@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class UserInput extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state={
       username: "",
@@ -10,15 +10,9 @@ class UserInput extends Component {
     }
   }
 
-  handleChangeName(event) {
+  handleChange(event) {
     this.setState({
-      username: event.target.value
-    })
-  }
-
-  handleChangeHometown(event) {
-    this.setState({
-      hometown: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -26,15 +20,8 @@ class UserInput extends Component {
     event.preventDefault();
     this.props.store.dispatch({
       type: 'ADD_USER',
-      user: {
-        username: this.state.username,
-        hometown: this.state.hometown
-      }
-    })
-    this.setState({
-      username: "",
-      hometown: ""
-    })
+      user: this.state,
+    });
   }
 
   render() {
@@ -45,13 +32,15 @@ class UserInput extends Component {
             <label>Username: </label>
             <input
               type="text"
-              onChange={(event) => this.handleChangeName(event)}/>
+              value={this.state.username}
+              onChange={(event) => this.handleChange(event)}/>
           </p>
           <p>
             <label>Hometown: </label>
             <input
               type="text"
-              onChange={(event) => this.handleChangeHometown(event)}/>
+              value={this.state.hometown}
+              onChange={(event) => this.handleChange(event)}/>
           </p>
           <input type="submit" />
         </form>
