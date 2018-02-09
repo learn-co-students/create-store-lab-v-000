@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 import manageUsers from './reducers/manageUsers';
 import App from './App';
 
@@ -11,8 +10,6 @@ export function configureStore(){
 };
 
 ReactDOM.render(
-  <Provider store={configureStore()}>
-    <App store={configureStore()} />
-  </Provider>,
+  <App store={configureStore()} />,
   document.getElementById('root')
 );
