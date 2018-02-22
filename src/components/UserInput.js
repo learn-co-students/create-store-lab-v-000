@@ -46,8 +46,6 @@ class UserInput extends Component {
           </p>
           <input type="submit" />
         </form>
-        <p>{this.state.username}</p>
-        <p>{this.state.hometown}</p>
       </div>
     );
   }
