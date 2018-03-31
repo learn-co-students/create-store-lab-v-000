@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 class UserInput extends Component {
   render() {
-    return(
+    return (
       <div>
-        user input
+        <form>
+          <input type="text" />
+        </form>
       </div>
     );
   }
