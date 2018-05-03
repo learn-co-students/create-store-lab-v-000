@@ -1,13 +1,46 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-class UserInput extends Component {
-  render() {
-    return(
-      <div>
-        user input
-      </div>
-    );
+export default class UserInput extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      username: '',
+      hometown: ''
+    }
   }
-};
 
-export default UserInput;
+  handleChange (event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleOnSubmit (event) {
+    event.preventDefault()
+    this.props.store.dispatch({
+      type: 'ADD_USER',
+      user: this.state
+    })
+  }
+
+  render () {
+    return (
+      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+        <input
+          type='text'
+          name='username'
+          value={this.state.username}
+          onChange={(event) => this.handleChange(event)}
+          placeholder='username' />
+        <input
+          type='text'
+          name='hometown'
+          value={this.state.hometown}
+          onChange={(event) => this.handleChange(event)}
+          placeholder='hometown' />
+        <input type='submit' />
+      </form>
+    )
+  }
+}
