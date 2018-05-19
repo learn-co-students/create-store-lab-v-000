@@ -9,6 +9,7 @@ export function configureStore(){
   return createStore(manageUsers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 };
 
+
 ReactDOM.render(
   <App store={configureStore()} />,
   document.getElementById('root')
