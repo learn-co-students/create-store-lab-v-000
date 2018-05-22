@@ -9,15 +9,9 @@ class UserInput extends Component {
     };
   }
 
-  handleTown(event) {
+  handleChange(event) {
     this.setState({
-      hometown: event.target.value
-    })
-  }
-
-  handleUsername(event) {
-    this.setState({
-      username: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -36,12 +30,14 @@ class UserInput extends Component {
           <label>Username: </label>
           <input
             type="text"
-            onChange={(event) => this.handleUsername(event)}
+            name="username"
+            onChange={(event) => this.handleChange(event)}
             value={this.state.text} />
           <label>Hometown: </label>
           <input
             type="text"
-            onChange={(event) => this.handleTown(event)} />
+            name="hometown"
+            onChange={(event) => this.handleChange(event)} />
             value={this.state.text}
           <input type="submit" />
         </form>
