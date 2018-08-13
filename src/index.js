@@ -10,6 +10,6 @@ export function configureStore(){
 };
 
 ReactDOM.render(
-  <App store={configureStore()} />,
-  document.getElementById('root')
+    <App store={configureStore()} />,
+    document.getElementById('root')
 );
