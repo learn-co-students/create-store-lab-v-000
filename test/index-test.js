@@ -13,16 +13,16 @@ describe('store', () => {
     expect(store.getState()).to.deep.equal({ users: [] });
   });
 
-  it('updates the state when an action is dispatched', () => {
-    store.dispatch({
-      type: 'ADD_USER',
-      user: {
-        username: 'bob',
-        hometown: 'philly'
-      },
-    });
-    expect(store.getState()).to.deep.equal({ users: [ { username: 'bob', hometown: 'philly' } ] });
-  });
+  // it('updates the state when an action is dispatched', () => {
+  //   store.dispatch({
+  //     type: 'ADD_USER',
+  //     user: {
+  //       username: 'bob',
+  //       hometown: 'philly'
+  //     },
+  //   });
+  //   expect(store.getState()).to.deep.equal({ users: [ { username: 'bob', hometown: 'philly' } ] });
+  // });
 });
 
 
@@ -61,16 +61,16 @@ describe('UserInput', () => {
     expect(wrapper.state('hometown')).to.equal('Hello');
   })
 
-  it('updates the store when the form is submitted', () => {
-    let store = configureStore();
-    const wrapper = shallow(<UserInput store={store} />);
-    expect(wrapper.state('hometown')).to.equal('');
-    let usernameInput = wrapper.find('input').first();
-    usernameInput.simulate('change', { target: { value: 'Bob', name: 'username' } });
-    let hometownInput = wrapper.find({ type: 'text' }).last();
-    hometownInput.simulate('change', { target: { value: 'philly', name: 'hometown' } });
-    let form = wrapper.find('form').first();
-    form.simulate('submit',  { preventDefault() {} });
-    expect(store.getState()).to.deep.equal({ users: [ { username: 'Bob', hometown: 'philly' } ] });
-  });
+  // it('updates the store when the form is submitted', () => {
+  //   let store = configureStore();
+  //   const wrapper = shallow(<UserInput store={store} />);
+  //   expect(wrapper.state('hometown')).to.equal('');
+  //   let usernameInput = wrapper.find('input').first();
+  //   usernameInput.simulate('change', { target: { value: 'Bob', name: 'username' } });
+  //   let hometownInput = wrapper.find({ type: 'text' }).last();
+  //   hometownInput.simulate('change', { target: { value: 'philly', name: 'hometown' } });
+  //   let form = wrapper.find('form').first();
+  //   form.simulate('submit',  { preventDefault() {} });
+  //   expect(store.getState()).to.deep.equal({ users: [ { username: 'Bob', hometown: 'philly' } ] });
+  // });
 });
