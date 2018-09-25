@@ -9,13 +9,13 @@ class UserInput extends Component {
     };
   }
 
-  handleChange(event) {
+  handleChange = (event)=> {
     this.setState({
       [event.target.name]: event.target.value,
     });
   }
 
-  handleOnSubmit(event) {
+  handleOnSubmit = (event)=> {
     event.preventDefault();
     this.props.store.dispatch({
       type: 'ADD_USER',
@@ -26,13 +26,13 @@ class UserInput extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
+        <form onSubmit={this.handleOnSubmit}>
           <p>
             <input
               type="text"
               name="username"
               value={this.state.username}
-              onChange={(event) => this.handleChange(event)}
+              onChange={this.handleChange}
               placeholder="username" />
           </p>
           <p>
@@ -40,7 +40,7 @@ class UserInput extends Component {
               type="text"
               name="hometown"
               value={this.state.hometown}
-              onChange={(event) => this.handleChange(event)}
+              onChange={this.handleChange}
               placeholder="hometown" />
           </p>
           <input type="submit" />
