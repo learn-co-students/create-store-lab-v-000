@@ -26,6 +26,8 @@ class UserInput extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    // store is being passed down from App; the app state can be changed by calling the dispatch function, which activates manageuser with the actio type ADD_USER and the user object
+    // can this method be rewritten with mapdispatch to props? i.e. packaging the dispatch method into another function?
     this.props.store.dispatch({
         type: 'ADD_USER',
         user: this.state,
