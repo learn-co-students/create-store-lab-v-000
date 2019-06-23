@@ -1,10 +1,48 @@
 import React, { Component } from 'react';
 
 class UserInput extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    username: '',
+    hometown: '',
+  }
+}
+  
+handleUsernameInputChange = (event) => {
+  this.setState(
+    {
+      username: event.target.value,
+    }
+  )
+}
+
+handleHometownInputChange = (event) => {
+  this.setState(
+    {
+      hometown: event.target.value,
+    }
+  )
+}
+
+
+handleFormSubmit = (event) => {
+  event.preventDefault();
+  this.props.store.dispatch({
+    type: 'ADD_USER',
+    user: this.state
+  })
+}
+
+
   render() {
     return(
       <div>
-        user input
+        <form onSubmit={this.handleFormSubmit}>
+       Username: <input onChange={this.handleUsernameInputChange} type="text"/>
+       Hometown: <input onChange={this.handleHometownInputChange} type="text"/>
+       <input type="submit"/>
+      </form>
       </div>
     );
   }
