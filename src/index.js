@@ -1,3 +1,4 @@
+//run npm install redux react-redux --save in terminal first!
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
